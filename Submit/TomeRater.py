@@ -136,6 +136,7 @@ class TomeRater():
         for b in self.books:
             if self.books[b] > mx:
                 mrb = b
+                mx = self.books[b]
         return mrb
 
     def highest_rated_book(self):
@@ -143,6 +144,7 @@ class TomeRater():
         for b in self.books:
             if b.get_average_rating() > mx:
                 hrb = b
+                mx = self.books[b]
         return hrb
         
     def most_positive_user(self):
@@ -150,5 +152,6 @@ class TomeRater():
         for u in self.users.values():
             if u.get_average_rating() > mx:
                 mpu = u
+                mx = self.books[b]
         return mpu
 
